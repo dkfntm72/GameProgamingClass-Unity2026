@@ -5,6 +5,7 @@ public class CarController : MonoBehaviour
     float speed = 0.1f;
     Vector2 startPos;
 
+
     void Start()
     {
         Application.targetFrameRate = 60;
@@ -21,8 +22,9 @@ public class CarController : MonoBehaviour
             Vector2 endPos = Input.mousePosition;
             float swipLen= endPos.x- startPos.x;
             speed = swipLen / 1000;
+            GetComponent<AudioSource>().Play();
         }
-         transform.Translate(speed, 0, 0);
+        transform.Translate(speed, 0, 0);
         speed *= 0.99f;
     }
 }
