@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.XR;
 
 public class PlayerController : MonoBehaviour
@@ -26,7 +27,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && rb.linearVelocityY == 0)
         {
             rb.AddForce(transform.up * jumpForce);
             animator.SetBool("isJump",true);
@@ -67,12 +68,19 @@ public class PlayerController : MonoBehaviour
         //    if (idx >= walksprites.length)
         //        idx = 0;
         //}
+
+        if(transform.position.y<=-8)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("flag"))
         {
+            SceneManager.LoadScene("ClearScene");
             Debug.Log("win");
         }
     }
