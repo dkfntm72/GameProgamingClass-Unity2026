@@ -475,6 +475,7 @@
 -analyzer:"D:/Unity_Editor/6000.0.41f1/6000.3.10f1/Editor/Data/Tools/BuildPipeline/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"D:/Unity_Editor/6000.0.41f1/6000.3.10f1/Editor/Data/Tools/BuildPipeline/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
 "Assets/20.Scripts/PlayerController.cs"
+"Assets/20.Scripts/PlayerMoveController.cs"
 -langversion:9.0
 /deterministic
 /optimize+

@@ -269,8 +269,8 @@ GameObject:
   - component: {fileID: 599845448}
   - component: {fileID: 599845447}
   - component: {fileID: 599845446}
-  - component: {fileID: 599845451}
   - component: {fileID: 599845452}
+  - component: {fileID: 599845453}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -461,27 +461,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &599845451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 599845445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2dbc13cac0f2334c96a6a4b5db19069, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  jumpForce: 300
-  walkForce: 30
-  maxWalkSpeed: 1
-  animator: {fileID: 0}
-  walkSprites:
-  - {fileID: 292310981503173399, guid: c00438fb0d604b44c9c3a73dfbe1c698, type: 3}
-  - {fileID: -7477192630708466740, guid: c3b9595e9781cff4fabcfc3d6c257adf, type: 3}
-  jumpSprite: {fileID: -7026802269355729512, guid: 20f2ff7bb6f18aa4e98fbf365ea35229, type: 3}
-  animtionPeriod: 0.1
 --- !u!95 &599845452
 Animator:
   serializedVersion: 7
@@ -504,6 +483,28 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &599845453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599845445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 027c2e3561abacf48bd0602f049bf5c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMoveController
+  jumpForce: 300
+  walkForce: 30
+  maxWalkSpeed: 1
+  key: 0
+  animator: {fileID: 0}
+  walkSprites:
+  - {fileID: 292310981503173399, guid: c00438fb0d604b44c9c3a73dfbe1c698, type: 3}
+  - {fileID: -7477192630708466740, guid: c3b9595e9781cff4fabcfc3d6c257adf, type: 3}
+  jumpSprite: {fileID: 0}
+  animtionPeriod: 0.1
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
