@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 978915e8f06af584fb95b81c6e0ae9d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemController
-  dropSpeed: -1
+  dropSpeed: -2
 --- !u!135 &3677465039647783652
 SphereCollider:
   m_ObjectHideFlags: 0

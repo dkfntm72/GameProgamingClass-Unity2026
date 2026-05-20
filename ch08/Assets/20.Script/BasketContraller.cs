@@ -7,6 +7,8 @@ public class BasketContraller : MonoBehaviour
 
     private AudioSource aud;
 
+    public GameDirector GD;
+
     private void Start()
     {
         Application.targetFrameRate = 60;
@@ -33,11 +35,13 @@ public class BasketContraller : MonoBehaviour
         if(other.gameObject.tag=="Apple")
         {
             aud.PlayOneShot(appleSE);
+            GD.GetApple();
             Debug.Log("사과 잡았다");
         }
         else if(other.gameObject.tag == "Bomb")
         {
             aud.PlayOneShot(bombSE);
+            GD.GetBomb();
             Debug.Log("폭탄 잡았다");
         }
 
